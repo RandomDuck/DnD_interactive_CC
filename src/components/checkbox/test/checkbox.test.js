@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import { Checkbox } from '..';
 
 
-test('renders hello world button', () => {
+test('chekbox is renderd', () => {
   render(<Checkbox />);
-  const linkElement = screen.getByText(/hello world/i);
-  expect(linkElement).toBeInTheDocument();
+  const checkbox = screen.getAllByRole(Checkbox)[0]
+  expect(checkbox).toBeVisible();
 });
