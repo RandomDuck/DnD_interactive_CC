@@ -1,4 +1,5 @@
-import {logo, StyledButton, StyledImg, helloWorld} from './imports';
+import logo from 'resources/logo.svg';
+import { StyledButton, StyledImg, helloWorld } from './imports';
 
 export function Example() {
   return (
