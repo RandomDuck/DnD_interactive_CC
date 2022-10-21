@@ -1,10 +1,11 @@
-import logo from 'resources/logo.svg';
+import {logo, StyledButton, StyledImg, helloWorld} from './imports';
 
-function App() {
+export function Example() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <StyledButton>{helloWorld()}</StyledButton>
+        <StyledImg src={logo} className="App-logo" alt="logo" />
         <p>
         </p>
         <a
@@ -20,4 +21,3 @@ function App() {
   );
 }
 
-export default App;
