@@ -2,8 +2,8 @@ const { atom } = require("jotai");
 
 const chekboxList = atom({});
 
-function addBox(list, name, target) {
-  list[name] = target
+function addBox(list, target) {
+  list[target.name] = target
   return list;
 }
 

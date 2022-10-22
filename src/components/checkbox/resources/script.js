@@ -1,16 +1,18 @@
 import { utils } from "atoms/checkbox-atoms";
 
-function toggleChek(check, set) {
-  check.checked = !check.checked
-  check.callback();
+function toggleChek(check, set, name) {
+  check[name].checked = !check[name].checked
+  check[name].callback();
   set({...check});
 }
 
-function initCheckbox(list, set, name, target) {
-  if (list[name] !== undefined) {
+function initCheckbox(list, set, target) {
+  if (list[target.name] !== undefined) {
     return;
   }
-  set(utils.addBox(list, name, target))
+
+  const newList = utils.addBox(list, target)
+  set({...newList})
 }
 
 export { toggleChek, initCheckbox };
