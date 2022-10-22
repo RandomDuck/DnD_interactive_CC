@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { Checkbox } from '..';
+import { StyledChekbox } from '../imports';
 
 
 test('chekbox is renderd', () => {
-  render(<Checkbox />);
-  const checkbox = screen.getAllByRole(Checkbox)[0]
+  render(<StyledChekbox />);
+  const checkbox = screen.getAllByRole('checkbox')[0]
   expect(checkbox).toBeVisible();
 });

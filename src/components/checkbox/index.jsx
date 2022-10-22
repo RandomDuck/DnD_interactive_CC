@@ -11,7 +11,6 @@ export function Checkbox({name, checked=false, callback=()=>{}}) {
     initCheckbox(checkList, setCheckList, targetObject.current);
   }, [checkList, setCheckList]);
   
-
   if (checkList[name]){
     return <StyledChekbox size="m" checked={checkList[name].checked} onChange={()=>toggleChek(checkList, setCheckList, name)} />;
   }
