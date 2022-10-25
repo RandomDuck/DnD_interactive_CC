@@ -1,8 +1,11 @@
-import { Example, Checkbox } from './imports';
+import { SkillsList, AbilityList, AbilityScore } from './imports';
 
 export function Root () {
-  return (<>
-    <Example />
-    <Checkbox name="data" />
-  </>);
+  return (
+    <div id='root' data-testid="root">
+      <AbilityScore type='proficiency' displayScore /><br />
+      <AbilityList />
+      <SkillsList />
+    </div>
+  );
 }
