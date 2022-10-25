@@ -1,13 +1,11 @@
-import { SkillItem } from 'components/skill-item';
-import { ModInput, Checkbox, ModDisplay } from './imports';
+import { SkillsList, AbilityList, AbilityScore } from './imports';
 
 export function Root () {
   return (
     <div id='root' data-testid="root">
-      <SkillItem type='str' name='acrobatics' size='m'/>
-      <Checkbox name='acrobatics' />
-      <ModInput type='str'/>
-      <ModDisplay type='str'/>
+      <AbilityScore type='proficiency' displayScore /><br />
+      <AbilityList />
+      <SkillsList />
     </div>
   );
 }
