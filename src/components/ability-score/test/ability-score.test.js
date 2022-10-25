@@ -1,9 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { AbilityScore } from '..';
 
-test('renders skill', () => {
-  render(<AbilityScore />);
-  const element = screen.getByTestId('skill');
+test('renders ability-score', () => {
+  render(<AbilityScore type='str' />);
+  const element = screen.getByTestId('ability-score');
   expect(element).toBeInTheDocument();
-  expect(element).toHaveAttribute('id','skill')
 });

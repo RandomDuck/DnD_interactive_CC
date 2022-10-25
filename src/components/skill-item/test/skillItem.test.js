@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import { Skill } from '..';
+import { SkillItem } from '..';
 
 test('renders skill', () => {
-  render(<Skill />);
+  render(<SkillItem type='str' name="test" />);
   const element = screen.getByTestId('skill');
   expect(element).toBeInTheDocument();
   expect(element).toHaveAttribute('id','skill')
