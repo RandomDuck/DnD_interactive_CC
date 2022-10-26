@@ -1,11 +1,18 @@
-import { SkillsList, AbilityList, AbilityScore } from './imports';
+import {
+  SkillsList,
+  AbilityList,
+  AbilityScore,
+  FlexDiv 
+} from './imports';
 
 export function Root () {
   return (
-    <div id='root' data-testid="root">
-      <AbilityScore type='proficiency' displayScore /><br />
-      <AbilityList />
+    <FlexDiv padding="20px 5px" id='root' data-testid="root">
+      <FlexDiv column center>
+        <AbilityScore type='proficiency' displayScore />
+        <AbilityList />
+      </FlexDiv>
       <SkillsList />
-    </div>
+    </FlexDiv>
   );
 }
