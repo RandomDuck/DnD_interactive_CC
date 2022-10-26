@@ -1,0 +1,5 @@
+const { atom } = require("jotai");
+
+const imageSrcAtom = atom('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/465f0805-2fc2-4e29-ae9d-dad7571f95e2/d8yr1wf-79a88478-07bd-4a4a-b05d-e9fdf0e08e50.jpg/v1/fill/w_778,h_1028,q_70,strp/tiefling_concept_by_devondraws_d8yr1wf-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM1MyIsInBhdGgiOiJcL2ZcLzQ2NWYwODA1LTJmYzItNGUyOS1hZTlkLWRhZDc1NzFmOTVlMlwvZDh5cjF3Zi03OWE4ODQ3OC0wN2JkLTRhNGEtYjA1ZC1lOWZkZjBlMDhlNTAuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.CC8PrXtXnmQoVDd_NZtdZsS4PFq38JCkDjkGQAA7bNo');
+
+export { imageSrcAtom };

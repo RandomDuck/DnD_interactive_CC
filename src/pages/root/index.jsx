@@ -4,6 +4,7 @@ import {
   AbilityScore,
   FlexDiv 
 } from './imports';
+import { CharacterImg } from 'components/caharacter-image';
 
 export function Root () {
   return (
@@ -13,6 +14,7 @@ export function Root () {
         <AbilityList />
       </FlexDiv>
       <SkillsList />
+      <CharacterImg isUploadable/>
     </FlexDiv>
   );
 }
