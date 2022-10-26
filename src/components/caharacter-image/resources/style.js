@@ -22,9 +22,11 @@ const LabelButton = styled('label')`
   margin: 0;
   padding: 2px;
   height: 99%;
+  border-radius: 5px;
+  background-color: #0004;
 
   :hover {
-    background-color: #0008;
+    background-color: #0006;
   }
 
   :active {
@@ -33,16 +35,25 @@ const LabelButton = styled('label')`
 `
 
 const StyledInputButton = styled('div')`
-  display: none;
-  padding: 0;
-  height: auto;
-  margin: 0;
+  border-radius: 5px;
   background-color: ${props => props.bgColor ? props.bgColor : "#aaa"};
+`
+
+const ColoredContainer = styled('div')`
+  align-items: center;
+  justify-content: center;
+  display: none;
+  padding: 3% 15%;
+  margin: 0;
+  background-color: ${props => props.bgColor ? props.bgColor : "#aaa"}7;
+  width: 100%;
+  height: 100%;
 
   :hover {
-    display: block;
+    display: flex;
   }
 `
+
 const StyledBackgroundImg = styled('div')`
   display: flex;
   align-items: center;
@@ -51,13 +62,17 @@ const StyledBackgroundImg = styled('div')`
   height: ${props => checkSize(props.size, 4.2)}px;
   background-image: url(${props => props.src});
   background-size: 100%;
-  :hover ${StyledInputButton} {
-    display: block;
+
+  :hover ${ColoredContainer} {
+    display: flex;
   }
 
   ${props => props.round && `
     border-radius: 50%;
     padding: 3px;
+    ${ColoredContainer} {
+      border-radius: 50%;
+    }
   `}
   
   ${props => props.border && 'border: solid black 2px;'}
@@ -66,11 +81,13 @@ const StyledBackgroundImg = styled('div')`
 
 function InputButton ({children, bgColor, ...props}) {
   return (
-    <StyledInputButton bgColor={bgColor}>
-      <LabelButton {...props}>
-        {children}
-      </LabelButton>
-    </StyledInputButton>
+    <ColoredContainer bgColor={bgColor}>
+      <StyledInputButton bgColor={bgColor}>
+        <LabelButton {...props}>
+          {children}
+        </LabelButton>
+      </StyledInputButton>
+    </ColoredContainer>
   );
 }
 
