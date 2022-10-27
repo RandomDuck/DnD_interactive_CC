@@ -8,13 +8,15 @@ import { CharacterImg } from 'components/caharacter-image';
 
 export function Root () {
   return (
-    <FlexDiv padding="20px 5px" id='root' data-testid="root">
-      <FlexDiv column center>
-        <AbilityScore type='proficiency' displayScore />
-        <AbilityList />
-      </FlexDiv>
-      <SkillsList />
+    <div>
       <CharacterImg isUploadable/>
-    </FlexDiv>
+      <FlexDiv padding="20px 5px" id='root' data-testid="root">
+        <FlexDiv column center>
+          <AbilityScore type='proficiency' displayScore />
+          <AbilityList />
+        </FlexDiv>
+        <SkillsList />
+      </FlexDiv>
+    </div>
   );
 }
