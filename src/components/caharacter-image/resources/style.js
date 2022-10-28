@@ -61,7 +61,8 @@ const StyledBackgroundImg = styled('div')`
   width: ${props => checkSize(props.size, 4.2)}px;
   height: ${props => checkSize(props.size, 4.2)}px;
   background-image: url(${props => props.src});
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   :hover ${ColoredContainer} {
     display: flex;
