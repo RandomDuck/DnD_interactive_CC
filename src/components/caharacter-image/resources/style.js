@@ -11,9 +11,6 @@ const StyledImg = styled('img')`
   ${props => props.round && `
     border-radius: 50%;
     padding: 3px;
-    ${ColoredContainer} {
-      border-radius: 50%;
-    }
   `}
 `
 
