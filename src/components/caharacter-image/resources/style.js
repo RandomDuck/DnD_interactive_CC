@@ -7,6 +7,14 @@ const StyledImg = styled('img')`
   margin: 0;
   flex-direction: column;
   padding: 5px;
+
+  ${props => props.round && `
+    border-radius: 50%;
+    padding: 3px;
+    ${ColoredContainer} {
+      border-radius: 50%;
+    }
+  `}
 `
 
 const HiddenInput = styled('input')`
