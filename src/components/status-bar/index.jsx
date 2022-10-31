@@ -1,9 +1,9 @@
 import { StyledDiv } from "./imports";
 
-export function StatusBar () {
+export function StatusBar ({ label, color, max }) {
   return(
-    <StyledDiv data-testid="status-bar">
-      hello there
+    <StyledDiv color={color} data-testid="status-bar">
+      {label}
     </StyledDiv>
   );
 }
