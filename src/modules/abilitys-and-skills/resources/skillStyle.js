@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledUl = styled('ul')`
+const SkillStyledUl = styled('ul')`
   flex-direction: column;
   display: inline-flex;
   align-items: flex-start;
@@ -8,4 +8,4 @@ const StyledUl = styled('ul')`
   margin-top: 0;
 `
 
-export { StyledUl };
+export { SkillStyledUl };

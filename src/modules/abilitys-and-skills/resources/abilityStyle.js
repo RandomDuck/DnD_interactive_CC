@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledUl = styled('ul')`
+const AbilityStyledUl = styled('ul')`
   flex-direction: column;
   display: inline-flex;
   margin: 15px;
@@ -9,4 +9,4 @@ const StyledUl = styled('ul')`
   border: solid black 2px;
 `
 
-export { StyledUl };
+export { AbilityStyledUl };
