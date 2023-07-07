@@ -2,7 +2,18 @@
 Interactive_CC 
 Will be a custom character sheet designed to make dnd character generation and modifying easier.
 
+### File structure
+
+  - atoms = contains Jotai configs
+  - components = react components 
+  - modules = collections of components working in tandem
+  - pages = collection of modules to form a page
+  - resources = image, video, and sound files
+  - utils = utility scripts useable by any file
+<br/><br/>
+
 ## Available Scripts
+___
 
 In the project directory, you can run:
 
