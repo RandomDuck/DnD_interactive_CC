@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-const StyledUl = styled('ul')`
-  flex-direction: column;
-  display: inline-flex;
+const EmblemContainer = styled('ul')`
+  flex-direction: row;
+  display: flex;
   align-items: flex-start;
-  border: black solid 2px;
-  margin-top: 0;
 `
 
-export { StyledUl };
+export { EmblemContainer };

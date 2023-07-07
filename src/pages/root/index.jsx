@@ -1,8 +1,9 @@
-import { AbilityAndSkill } from './imports';
+import { CharacterEmblem, AbilityAndSkill } from './imports';
 
-export function Root () {
+export function Root() {
   return (
-    <div>
+    <div id="root" data-testid="root">
+      <CharacterEmblem />
       <AbilityAndSkill />
     </div>
   );
