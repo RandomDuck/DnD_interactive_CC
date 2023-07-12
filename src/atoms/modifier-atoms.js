@@ -8,7 +8,7 @@ const intelligence = atom(10);
 const charisma = atom(10);
 const proficiency = atom(2);
 const speed = atom(30);
-const armorclas = atom(12);
+const armorclass = atom(12);
 
 function getModifierAtom(target) {
   switch (target) {
@@ -35,12 +35,13 @@ function getModifierAtom(target) {
       return proficiency;
     case 'speed':
     case 'spd':
-      return speed
+      return speed;
     case 'ac':
     case 'armorclass':
-      return armorclas
+      return armorclass;
     default:
-      return "no souch target";
+      console.error("no souch target in modifier atoms:", target);
+      return atom(0);
   }
 }
 

@@ -1,13 +1,13 @@
 import { useAtom } from "jotai"
 import { TextContainer, TextInput } from "../imports";
 
-export const ValueText = ({ color, maxConfig, valueConfig, label }) => {
+export const ValueText = ({ noMax = false, color, maxConfig, valueConfig, label }) => {
   return (
     <TextContainer color={color} >
       {label}:
       <TextValueChanger pushRight config={valueConfig} />
-      /
-      <TextValueChanger config={maxConfig} />
+      {!noMax && "/"}
+      {!noMax && <TextValueChanger config={maxConfig} />}
     </TextContainer>
   )
 }
@@ -15,9 +15,9 @@ export const ValueText = ({ color, maxConfig, valueConfig, label }) => {
 const TextValueChanger = ({ pushRight = false, config }) => {
   const [value, setValue] = useAtom(config);
   const maxVal = 999999999999999;
-  
+
   function valueCheck(e) {
-    const valTarget = String(e.target.value).replaceAll(' ','');
+    const valTarget = String(e.target.value).replaceAll(' ', '');
     if (isNaN(Number(valTarget))) {
       return Number(value);
     }

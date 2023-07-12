@@ -16,7 +16,7 @@ const Wrapper = styled('div')`
   margin-left: 0.1em;
   margin-right: 0.1em;
   position: relative;
-  width: ${props => 10 + (props.max / 6)}em;
+  width: ${props => props.noMax ? 12 : 10 + (props.max / 6)}em;
   border: solid 1px black;
   height: 1.25em;
 `
