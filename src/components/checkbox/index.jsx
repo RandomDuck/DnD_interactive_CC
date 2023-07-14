@@ -5,8 +5,7 @@ import { useEffect, useRef } from 'react';
 
 export function Checkbox({name, checked=false, callback=()=>{}, size}) {
   const targetObject = useRef({name, checked, callback});
-  const [checkList, setCheckList] = useAtom(chekboxList);  
-console.log(name, checkList)
+  const [checkList, setCheckList] = useAtom(chekboxList);
   useEffect(()=>{
     initCheckbox(checkList, setCheckList, targetObject.current);
   }, [checkList, setCheckList]);
