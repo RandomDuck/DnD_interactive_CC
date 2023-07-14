@@ -12,4 +12,22 @@ const FlexBarWrapper = styled('div')`
   flex: 1;
 `
 
-export { EmblemContainer, FlexBarWrapper };
+const CircularEmblem = styled('div')`
+  border-radius: 50%;
+  position: absolute;
+  right: -0.2em;
+  bottom: -0.2em;
+  border: solid 1px black;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+`
+
+const RelativeContainer = styled('div')`
+  position: relative;
+`
+
+export { EmblemContainer, FlexBarWrapper, CircularEmblem, RelativeContainer };

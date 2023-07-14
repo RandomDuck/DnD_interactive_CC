@@ -1,9 +1,12 @@
 
-import { EmblemContainer, CharacterImg, StatusBar, CombatEmblems, currentHp, maxHp, currentTempHp, FlexBarWrapper } from './imports';
+import { EmblemContainer, CharacterImg, StatusBar, CombatEmblems, currentHp, maxHp, currentTempHp, FlexBarWrapper, RelativeContainer, LevelEmblem, totalLevel } from './imports';
 
 export function CharacterEmblem() {
   return <EmblemContainer id='CharacterEmblem' data-testid="CharacterEmblem">
-    <CharacterImg isUploadable />
+    <RelativeContainer>
+      <CharacterImg isUploadable />
+      <LevelEmblem config={totalLevel}/>
+    </RelativeContainer>
     <FlexBarWrapper>
       <StatusBar
         internalButtons

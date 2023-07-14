@@ -13,4 +13,4 @@ function removeBox(list, name) {
 }
 
 const utils = { addBox, removeBox };
-export { utils, chekboxList};
+export { utils, chekboxList };
