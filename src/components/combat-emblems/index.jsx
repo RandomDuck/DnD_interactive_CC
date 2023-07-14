@@ -18,6 +18,7 @@ export function CombatEmblems() {
         <ModInput hideTxt type='ac' size='ml' displayScore />
         <CheckboxContainer>
           <Checkbox name="shield" size='ms' />
+          {/* Todo: add AC if a shield is in use */}
           <BoxText style={{marginLeft:'0.3em'}}>has shield</BoxText>
         </CheckboxContainer>
       </CombatBox>
