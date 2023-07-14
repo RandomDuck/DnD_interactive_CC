@@ -4,7 +4,7 @@ import { CombatBox, StyledDiv, ModInput, Checkbox, CheckboxContainer, BoxText } 
 
 export function CombatEmblems() {
   return (
-    <StyledDiv>
+    <StyledDiv id='combat-emblems' data-testid="combat-emblems">
       <CombatBox label="Inspiration">
         <Checkbox name="insp" size="l"/>
       </CombatBox>

@@ -1,14 +1,32 @@
 import { render, screen } from '@testing-library/react';
 import { CombatEmblems } from '..';
 
-test('renders learn react link', () => {
+test('renders emblems component', () => {
   render(<CombatEmblems />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const element = screen.getByTestId('combat-emblems');
+  expect(element).toBeInTheDocument();
 });
 
-test('renders hello world button', () => {
+test('renders Inspiration emblem', () => {
   render(<CombatEmblems />);
-  const linkElement = screen.getByText(/hello world/i);
-  expect(linkElement).toBeInTheDocument();
+  const element = screen.getByText(/Inspiration/i);
+  expect(element).toBeInTheDocument();
+});
+
+test('renders Proficiency emblem', () => {
+  render(<CombatEmblems />);
+  const element = screen.getByText(/Proficiency/i);
+  expect(element).toBeInTheDocument();
+});
+
+test('renders Speed emblem', () => {
+  render(<CombatEmblems />);
+  const element = screen.getByText(/Speed/i);
+  expect(element).toBeInTheDocument();
+});
+
+test('renders Armor class emblem', () => {
+  render(<CombatEmblems />);
+  const element = screen.getByText(/Armor class/i);
+  expect(element).toBeInTheDocument();
 });
