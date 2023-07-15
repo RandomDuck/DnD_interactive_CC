@@ -8,5 +8,8 @@ const FlexDiv = styled('div')`
   ${props => props.border && 'border: solid black 2px;'}
   ${props => props.padding && `padding: ${props.padding}`}
 `
+const CombinedFlexDiv = styled(FlexDiv)`
+  display: flex;
+`
 
-export { FlexDiv };
+export { FlexDiv, CombinedFlexDiv };
