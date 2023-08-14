@@ -3,7 +3,7 @@ import { Root } from '..';
 
 test('renders root', () => {
   render(<Root />);
-  const element = screen.getByTestId('root');
+  const element = screen.getByTestId('rootElement');
   expect(element).toBeInTheDocument();
-  expect(element).toHaveAttribute('id','root')
+  expect(element).toHaveAttribute('id','rootElement');
 });

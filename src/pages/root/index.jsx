@@ -2,7 +2,7 @@ import { CharacterEmblem, AbilityAndSkill } from './imports';
 
 export function Root() {
   return (
-    <div id="root" data-testid="root">
+    <div id="rootElement" data-testid="rootElement">
       <CharacterEmblem />
       <AbilityAndSkill />
     </div>
