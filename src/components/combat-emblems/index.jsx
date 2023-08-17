@@ -8,6 +8,9 @@ export function CombatEmblems() {
       <CombatBox label="Inspiration">
         <Checkbox name="insp" size="l"/>
       </CombatBox>
+      <CombatBox label="Initiative">
+        <ModInput type="init"/>
+      </CombatBox>
       <CombatBox label="Proficiency">
         <ModInput hideTxt type='proficiency' size='ml' displayScore />
       </CombatBox>

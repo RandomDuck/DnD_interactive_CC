@@ -9,6 +9,12 @@ const charisma = atom(10);
 const proficiency = atom(2);
 const speed = atom(30);
 const armorclass = atom(12);
+//TODO: make a way to reset initOveride.
+const initOveride = atom(null);
+const initiative = atom(
+  (get)=> get(initOveride) ?? calcAbilityScore(get(dexterity)),
+  (_get,set,val)=>set(initOveride,isNaN(val) ? String(val) : val)
+);
 
 function getModifierAtom(target) {
   switch (target) {
@@ -39,6 +45,9 @@ function getModifierAtom(target) {
     case 'ac':
     case 'armorclass':
       return armorclass;
+    case 'init':
+    case 'initiative':
+      return initiative
     default:
       console.error("no souch target in modifier atoms:", target);
       return atom(0);
