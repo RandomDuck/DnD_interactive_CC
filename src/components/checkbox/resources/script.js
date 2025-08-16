@@ -1,9 +1,9 @@
-import { utils } from "atoms/checkbox-atoms";
+import { utils } from "@/atoms/checkbox-atoms";
 
 function toggleChek(check, set, name) {
   check[name].checked = !check[name].checked
   check[name].callback();
-  set({...check});
+  set({ ...check });
 }
 
 function initCheckbox(list, set, target) {
@@ -12,7 +12,7 @@ function initCheckbox(list, set, target) {
   }
 
   const newList = utils.addBox(list, target)
-  set({...newList})
+  set({ ...newList })
 }
 
 export { toggleChek, initCheckbox };

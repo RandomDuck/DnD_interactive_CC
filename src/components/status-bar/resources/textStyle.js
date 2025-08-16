@@ -1,4 +1,5 @@
-import styled from "styled-components"
+"use client";
+import styled from "styled-components";
 
 const TextContainer = styled('div')`
   color: ${props => props.color};

@@ -8,7 +8,7 @@ test('renders SkillsList', () => {
   render(<CharacterEmblem />);
   const element = screen.getByTestId('CharacterEmblem');
   expect(element).toBeInTheDocument();
-  expect(element).toHaveAttribute('id','CharacterEmblem')
+  expect(element).toHaveAttribute('id', 'CharacterEmblem')
 });
 
 test('renders levelEmblem', () => {

@@ -1,4 +1,5 @@
-import styled from "styled-components"
+"use client";
+import styled from "styled-components";
 
 const TopWrapper = styled('div')`
   display: flex;

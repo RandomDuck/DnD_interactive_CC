@@ -1,8 +1,8 @@
+"use client";
 import { useAtom } from "jotai";
 import { ButtonWrapper, StyledButton } from "../imports";
 import { useEffect, useRef } from "react";
 const countTarget = 200
-
 function SubtractionButton({ config, min, arAmmount = 1 }) {
   const [, setValue] = useAtom(config)
 

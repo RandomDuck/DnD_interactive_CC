@@ -1,5 +1,6 @@
+"use client";
 import styled from "styled-components";
-import { checkSize } from "utils";
+import { checkSize } from "@/utils";
 
 const StyledImg = styled('img')`
   width: ${props => checkSize(props.size, 4)}px;
@@ -85,7 +86,7 @@ const StyledBackgroundImg = styled('div')`
   ${props => props.borderColor && `border-color: ${props.borderColor};`}
 `
 
-function InputButton ({children, bgColor, ...props}) {
+function InputButton({ children, bgColor, ...props }) {
   return (
     <ColoredContainer bgColor={bgColor}>
       <StyledInputButton bgColor={bgColor}>

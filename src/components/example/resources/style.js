@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 
 const StyledImg = styled('img')`
@@ -8,4 +9,4 @@ const StyledButton = styled('button')`
   color: blue;
 `
 
-export { StyledButton, StyledImg};
+export { StyledButton, StyledImg };

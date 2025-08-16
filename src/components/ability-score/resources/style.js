@@ -1,4 +1,6 @@
-import styled from "styled-components";
+"use client";
+"use client";
+import styled from "styled-components";;
 
 const StyledLi = styled('li')`
   margin: 0;

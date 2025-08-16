@@ -1,7 +1,8 @@
+"use client";
 import styled from "styled-components";
-import { checkSize } from "utils";
+import { checkSize } from "@/utils";
 
-function Checkbox({children, type, round=false, checked, ...props}) {
+function Checkbox({ children, type, round = false, checked, ...props }) {
   return <input type={round ? 'radio' : 'checkbox'} checked={checked} {...props} />
 }
 

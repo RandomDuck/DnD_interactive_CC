@@ -1,19 +1,21 @@
 # Interactive DnD Character sheet
-Interactive_CC 
+
+Interactive_CC
 Will be a custom character sheet designed to make dnd character generation and modifying easier.
 
 ### File structure
 
-  - atoms = contains Jotai configs
-  - components = react components 
-  - modules = collections of components working in tandem
-  - pages = collection of modules to form a page
-  - resources = image, video, and sound files
-  - utils = utility scripts useable by any file
-<br/><br/>
+- atoms = contains Jotai configs
+- components = react components
+- modules = collections of components working in tandem
+- pages = collection of modules to form a page
+- resources = image, video, and sound files
+- utils = utility scripts useable by any file
+  <br/><br/>
 
 ## Available Scripts
-___
+
+---
 
 In the project directory, you can run:
 
@@ -29,4 +31,3 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-

@@ -5,7 +5,7 @@ export function CharacterEmblem() {
   return <EmblemContainer id='CharacterEmblem' data-testid="CharacterEmblem">
     <RelativeContainer>
       <CharacterImg isUploadable />
-      <LevelEmblem config={totalLevel}/>
+      <LevelEmblem config={totalLevel} />
     </RelativeContainer>
     <FlexBarWrapper>
       <StatusBar
