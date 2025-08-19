@@ -1,4 +1,3 @@
-"use client";
 import { useAtom } from 'jotai';
 import { chekboxList } from '@/atoms/checkbox-atoms'
 import { StyledChekbox, initCheckbox, toggleChek } from './imports';

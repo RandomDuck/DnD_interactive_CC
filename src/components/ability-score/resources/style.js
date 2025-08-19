@@ -1,5 +1,3 @@
-"use client";
-"use client";
 import styled from "styled-components";;
 
 const StyledLi = styled('li')`
