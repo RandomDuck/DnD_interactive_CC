@@ -1,4 +1,4 @@
-import { BorderBox, BoxText } from "../imports"
+import { BorderBox, BoxText } from "../resources/style"
 const CombatBox = ({ label, children }) => {
   return (
     <BorderBox>

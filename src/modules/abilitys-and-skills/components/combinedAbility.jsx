@@ -1,4 +1,7 @@
-import { AbilityScore, SkillItem, CombinedWrapper, CombinedSkillUL, CombinedAbilityWrapper, SplitDiv, CombinedFlexDiv } from '../imports';
+import { CombinedWrapper, CombinedSkillUL, CombinedAbilityWrapper, SplitDiv } from '../resources/componentStyle';
+import { CombinedFlexDiv } from '../resources/indexStyle';
+import { SkillItem } from '@/components/skill-item';
+import { AbilityScore } from '@/components/ability-score';
 
 const CombinedStrength = ({ $column, $split }) => {
   return (

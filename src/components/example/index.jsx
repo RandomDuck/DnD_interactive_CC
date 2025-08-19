@@ -1,5 +1,6 @@
 import logo from '@/resources/logo.svg';
-import { StyledButton, StyledImg, helloWorld } from './imports';
+import { StyledButton, StyledImg } from './resources/style'
+import { helloWorld } from './resources/script';
 
 export function Example() {
   return (

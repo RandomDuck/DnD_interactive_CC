@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import { SkillsList, AbilityList, SavingThrows } from '../imports';
+import { SavingThrows } from './components/savingThrowList';
+import { SkillsList } from './components/skillList';
+import { AbilityList } from './components/abilityList';
 import { AbilityAndSkill } from '..';
 
 test('renders SkillsList', () => {

@@ -1,5 +1,11 @@
 
-import { EmblemContainer, CharacterImg, StatusBar, CombatEmblems, currentHp, maxHp, currentTempHp, FlexBarWrapper, RelativeContainer, LevelEmblem, totalLevel } from './imports';
+import { currentHp, maxHp, currentTempHp } from '@/atoms/health-bar-atom';
+import { StatusBar } from '@/components/status-bar';
+import { CharacterImg } from '@/components/caharacter-image';
+import { CombatEmblems } from '@/components/combat-emblems';
+import { totalLevel } from '@/atoms/level-atom';
+import { EmblemContainer, FlexBarWrapper, RelativeContainer } from './resources/style';
+import { LevelEmblem } from './components/levelEmblem';
 
 export function CharacterEmblem() {
   return <EmblemContainer id='CharacterEmblem' data-testid="CharacterEmblem">

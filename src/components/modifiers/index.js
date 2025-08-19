@@ -1,2 +1,2 @@
-export * from './components/modDisplay'
-export * from './components/modInput'
+export { ModDisplay } from './components/modDisplay'
+export { ModInput } from './components/modInput'

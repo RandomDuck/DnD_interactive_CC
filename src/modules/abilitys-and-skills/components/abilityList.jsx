@@ -1,4 +1,5 @@
-import { AbilityScore, AbilityStyledUl } from '../imports';
+import { AbilityStyledUl } from '../resources/componentStyle';
+import { AbilityScore } from '@/components/ability-score';
 
 const AbilityList = () => {
   return (

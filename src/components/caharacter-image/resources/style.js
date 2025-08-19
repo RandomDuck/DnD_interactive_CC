@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { checkSize } from "@/utils";
+import { checkSize } from "@/utils/scale";
 
 const StyledImg = styled('img')`
   width: ${props => checkSize(props.$size, 4)}px;

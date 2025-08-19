@@ -2,7 +2,7 @@
 import { imageSrcAtom } from '@/atoms/chatacter-image-atom';
 import { useAtom } from 'jotai';
 import { useEffect, useId } from 'react';
-import { StyledImg, HiddenInput, InputButton, StyledBackgroundImg } from './imports';
+import { StyledImg, HiddenInput, InputButton, StyledBackgroundImg } from './resources/style';
 
 export function CharacterImg({ isUploadable = false, size, ...props }) {
   const inputId = useId();

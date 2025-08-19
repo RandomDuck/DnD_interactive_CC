@@ -1,5 +1,5 @@
 import { useAtom } from "jotai";
-import { ButtonWrapper, StyledButton } from "../imports";
+import { ButtonWrapper, StyledButton } from "../resources/buttonStyle";
 import { useEffect, useRef } from "react";
 const countTarget = 200
 function SubtractionButton({ config, min, arAmmount = 1 }) {

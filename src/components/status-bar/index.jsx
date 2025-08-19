@@ -2,14 +2,16 @@ import { atom, useAtom } from "jotai";
 import {
   TopWrapper,
   Wrapper,
-  ValueButtons,
   BackBar,
-  FrontBar,
   BarWrapper,
-  ValueText,
+  FrontBar
+} from './resources/indexStyle';
+import {
+  ValueButtons,
   SubtractionButton,
   AdditionButton
-} from "./imports";
+} from './components/valueButtons';
+import { ValueText } from './components/valueText';
 
 const localPlaceholderAtom = atom(1);
 

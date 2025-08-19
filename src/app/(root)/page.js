@@ -1,5 +1,6 @@
 "use client";
-import { CharacterEmblem, AbilityAndSkill } from '@/app/(root)/imports';
+import { AbilityAndSkill } from '@/modules/abilitys-and-skills';
+import { CharacterEmblem } from '@/modules/character-emblem';
 
 export default function Root() {
   return (

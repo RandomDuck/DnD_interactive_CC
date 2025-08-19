@@ -1,10 +1,8 @@
-import {
-  CombinedList,
-  SavingThrows,
-  SkillsList,
-  AbilityList,
-  FlexDiv
-} from './imports';
+import { CombinedList } from './components/combinedAbility';
+import { SavingThrows } from './components/savingThrowList';
+import { SkillsList } from './components/skillList';
+import { AbilityList } from './components/abilityList';
+import { FlexDiv } from './resources/indexStyle';
 
 export function AbilityAndSkill({ $column = false, combinedStyle = false, $split = 1 }) {
   if (combinedStyle) {

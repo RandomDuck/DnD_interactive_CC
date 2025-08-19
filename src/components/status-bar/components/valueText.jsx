@@ -1,5 +1,5 @@
 import { useAtom } from "jotai"
-import { TextContainer, TextInput } from "../imports";
+import { TextContainer, TextInput } from "../resources/textStyle";
 
 export const ValueText = ({ $noMax = false, $color, maxConfig, valueConfig, label }) => {
   return (

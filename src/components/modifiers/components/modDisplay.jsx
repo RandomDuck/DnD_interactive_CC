@@ -1,7 +1,8 @@
 import { getModifierAtom } from '@/atoms/modifier-atoms';
 import { chekboxList } from '@/atoms/checkbox-atoms';
 import { useAtom } from 'jotai';
-import { StyledSpan, calcAbilityWithProf } from '../imports';
+import { calcAbilityWithProf } from '../resources/script.js';
+import { StyledSpan } from '../resources/style.js';
 
 export function ModDisplay({ type, classes, boxName, showAtr, text = "", displayScore = false }) {
   const [getList] = useAtom(chekboxList);

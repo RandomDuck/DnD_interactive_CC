@@ -1,6 +1,6 @@
 import { getModifierAtom } from '@/atoms/modifier-atoms';
 import { useAtom } from 'jotai';
-import { StyledInput } from '../imports';
+import { StyledInput } from '../resources/style.js';
 
 export function ModInput({ type, size, $underline = false }) {
   const [mod, setMod] = useAtom(getModifierAtom(type))

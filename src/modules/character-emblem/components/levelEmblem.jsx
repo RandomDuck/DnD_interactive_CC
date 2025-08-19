@@ -1,5 +1,5 @@
 import { useAtom } from 'jotai';
-import { CircularEmblem } from '../imports';
+import { CircularEmblem } from '../resources/style';
 
 const LevelEmblem = ({ config }) => {
   const [level] = useAtom(config);

@@ -1,4 +1,5 @@
-import { SkillItem, SkillStyledUl } from '../imports';
+import { SkillStyledUl } from '../resources/componentStyle';
+import { SkillItem } from '@/components/skill-item';
 
 const SkillsList = () => {
   return (
