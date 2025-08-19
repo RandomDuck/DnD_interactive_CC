@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { checkSize } from "@/utils";
 
 const StyledImg = styled('img')`
-  width: ${props => checkSize(props.size, 4)}px;
-  height: ${props => checkSize(props.size, 4)}px;
+  width: ${props => checkSize(props.$size, 4)}px;
+  height: ${props => checkSize(props.$size, 4)}px;
   margin: 0;
   flex-direction: column;
   padding: 5px;
 
-  ${props => props.round && `
+  ${props => props.$round && `
     border-radius: 50%;
     padding: 3px;
   `}
@@ -41,7 +41,7 @@ const LabelButton = styled('label')`
 
 const StyledInputButton = styled('div')`
   border-radius: 5px;
-  background-color: ${props => props.bgColor ? props.bgColor : "#aaa"};
+  background-color: ${props => props.$bgColor ? props.$bgColor : "#aaa"};
 `
 
 const ColoredContainer = styled('div')`
@@ -50,7 +50,7 @@ const ColoredContainer = styled('div')`
   display: none;
   padding: 3% 15%;
   margin: 0;
-  background-color: ${props => props.bgColor ? props.bgColor : "#aaa"}7;
+  background-color: ${props => props.$bgColor ? props.$bgColor : "#aaa"}7;
   width: 100%;
   height: 100%;
 
@@ -63,8 +63,8 @@ const StyledBackgroundImg = styled('div')`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${props => checkSize(props.size, 4.2)}px;
-  height: ${props => checkSize(props.size, 4.2)}px;
+  width: ${props => checkSize(props.$size, 4.2)}px;
+  height: ${props => checkSize(props.$size, 4.2)}px;
   background-image: url(${props => props.src});
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,7 +73,7 @@ const StyledBackgroundImg = styled('div')`
     display: flex;
   }
 
-  ${props => props.round && `
+  ${props => props.$round && `
     border-radius: 50%;
     padding: 3px;
     ${ColoredContainer} {
@@ -81,14 +81,14 @@ const StyledBackgroundImg = styled('div')`
     }
   `}
   
-  ${props => props.border && 'border: solid black 2px;'}
-  ${props => props.borderColor && `border-color: ${props.borderColor};`}
+  ${props => props.$border && 'border: solid black 2px;'}
+  ${props => props.$borderColor && `border-color: ${props.$borderColor};`}
 `
 
-function InputButton({ children, bgColor, ...props }) {
+function InputButton({ children, $bgColor, ...props }) {
   return (
-    <ColoredContainer bgColor={bgColor}>
-      <StyledInputButton bgColor={bgColor}>
+    <ColoredContainer $bgColor={$bgColor}>
+      <StyledInputButton $bgColor={$bgColor}>
         <LabelButton {...props}>
           {children}
         </LabelButton>
