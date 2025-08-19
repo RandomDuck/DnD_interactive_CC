@@ -10,7 +10,7 @@ const StyledButton = styled('button')`
   top: 0;
   bottom: 0;
   width: 25px;
-  ${props => props.pushRight ? 'right: 0;' : 'left: 0;'}
+  ${props => props.$pushRight ? 'right: 0;' : 'left: 0;'}
 `
 
 export { ButtonWrapper, StyledButton };

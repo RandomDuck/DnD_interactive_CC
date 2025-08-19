@@ -1,13 +1,13 @@
 import { useAtom } from "jotai"
 import { TextContainer, TextInput } from "../imports";
 
-export const ValueText = ({ noMax = false, color, maxConfig, valueConfig, label }) => {
+export const ValueText = ({ $noMax = false, $color, maxConfig, valueConfig, label }) => {
   return (
-    <TextContainer color={color} >
+    <TextContainer $color={$color} >
       {label}:
-      <TextValueChanger pushRight config={valueConfig} />
-      {!noMax && "/"}
-      {!noMax && <TextValueChanger config={maxConfig} />}
+      <TextValueChanger $pushRight config={valueConfig} />
+      {!$noMax && "/"}
+      {!$noMax && <TextValueChanger config={maxConfig} />}
     </TextContainer>
   )
 }
@@ -25,8 +25,8 @@ const TextValueChanger = ({ pushRight = false, config }) => {
   }
 
   return <TextInput
-    maxWidth={String(value).length * 0.65}
-    pushRight={pushRight}
+    $maxWidth={String(value).length * 0.65}
+    $pushRight={pushRight}
     onChange={(e) => setValue(valueCheck(e))}
     value={String(value).match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g).join(' ')}
     title={String(value).match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g).join(' ')}

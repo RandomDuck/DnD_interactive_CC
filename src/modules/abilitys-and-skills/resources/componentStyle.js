@@ -26,12 +26,12 @@ const SplitDiv = styled('div')`
 `
 
 const CombinedWrapper = styled('div')`
-  ${props => props.split && (props.column ? 'height: 16em;' : 'height: 12em;')}
+  ${props => props.$split && (props.$column ? 'height: 16em;' : 'height: 12em;')}
   display: flex;
-  flex-direction: ${props => props.column ? 'column' : 'row'};
+  flex-direction: ${props => props.$column ? '$column' : 'row'};
   border-top: solid black 2px;
   margin-bottom: 0.5em;
-  width: ${props => props.column ? '14em' : '21em'};
+  width: ${props => props.$column ? '14em' : '21em'};
 `
 
 const CombinedAbilityWrapper = styled('div')`

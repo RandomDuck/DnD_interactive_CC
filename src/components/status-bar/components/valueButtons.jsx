@@ -50,7 +50,7 @@ function AdditionButton({ config, max, arAmmount = 1 }) {
   const handleAdditionClick = () => {
     setValue((prevVal) => prevVal + arAmmount > max ? max : prevVal + arAmmount);
   }
-  return <StyledButton pushRight onMouseDown={handleCountdown} onMouseUp={stopCountdown} onClick={handleAdditionClick}>+</StyledButton>
+  return <StyledButton $pushRight onMouseDown={handleCountdown} onMouseUp={stopCountdown} onClick={handleAdditionClick}>+</StyledButton>
 }
 
 function ValueButtons({ config, max, min, arAmmount = 1 }) {

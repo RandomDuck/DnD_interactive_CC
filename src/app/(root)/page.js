@@ -5,7 +5,7 @@ export default function Root() {
   return (
     <div id="rootElement" data-testid="rootElement">
       <CharacterEmblem />
-      <AbilityAndSkill />
+      <AbilityAndSkill combinedStyle />
     </div>
   );
 }

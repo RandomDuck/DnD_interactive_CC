@@ -7,7 +7,7 @@ const StyledInput = styled('input')`
   text-align: center;
   padding: 0;
   ${props => {
-    if (props.underline) {
+    if (props.$underline) {
       return `
           border-top: 0;
           border-left: 0;
@@ -32,7 +32,7 @@ const StyledInput = styled('input')`
 const StyledSpan = styled('span')`
   margin-left: 6px;
   color: black;
-  ${props => props.underline ? 'text-decoration: underline;' : ''}
+  ${props => props.$underline ? 'text-decoration: $underline;' : ''}
 `
 
 export { StyledInput, StyledSpan };

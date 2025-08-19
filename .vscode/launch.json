@@ -10,7 +10,15 @@
       "console": "integratedTerminal",
       "name": "Launch Program",
       "program": "${workspaceFolder}/node_modules/react-scripts/bin/react-scripts.js",
-      "args": ["start"]
+      "args": ["dev"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "name": "Launch Lint",
+      "program": "${workspaceFolder}/node_modules/react-scripts/bin/react-scripts.js",
+      "args": ["lint"]
     },
     {
       "type": "node",
@@ -19,6 +27,22 @@
       "name": "Launch Test",
       "program": "${workspaceFolder}/node_modules/react-scripts/bin/react-scripts.js",
       "args": ["test"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "name": "Run build",
+      "program": "${workspaceFolder}/node_modules/react-scripts/bin/react-scripts.js",
+      "args": ["start"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "name": "Build program",
+      "program": "${workspaceFolder}/node_modules/react-scripts/bin/react-scripts.js",
+      "args": ["build"]
     }
   ]
 }

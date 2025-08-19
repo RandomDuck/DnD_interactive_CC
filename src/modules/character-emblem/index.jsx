@@ -9,17 +9,17 @@ export function CharacterEmblem() {
     </RelativeContainer>
     <FlexBarWrapper>
       <StatusBar
-        internalButtons
+        $internalButtons
         maxConfig={maxHp}
         label="Health"
-        color={{ positive: '#c00', negative: '#700', text: '#0a0' }}
+        $color={{ positive: '#c00', negative: '#700', text: '#0a0' }}
         config={currentHp}
       />
       <StatusBar
-        internalButtons
-        noMax
+        $internalButtons
+        $noMax
         label="Temp HP"
-        color={{ positive: '#0cc', negative: '#077', text: '#dd0' }}
+        $color={{ positive: '#0cc', negative: '#077', text: '#dd0' }}
         config={currentTempHp}
       />
       <CombatEmblems />
