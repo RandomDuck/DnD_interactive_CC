@@ -116,7 +116,6 @@ const CombinedList = ({ $column = false, $split = 1 }) => {
       const chunk = list.slice(i, i + list.length / numGroups);
       newList.push(chunk)
     }
-    console.log(newList, list.length, numGroups)
     return newList;
   }
 
