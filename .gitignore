@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/characters.json
 
 # next.js
 /.next/

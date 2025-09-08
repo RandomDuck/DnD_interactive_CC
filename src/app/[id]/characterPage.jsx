@@ -129,7 +129,7 @@ export default function CharacterPageClient({ id, serverData }) {
     const s = createStore();
 
     // base atoms
-    s.set(imageSrcAtom, p.imageSrc ?? "");
+    s.set(imageSrcAtom, p.imageSrc ?? null);
     s.set(chekboxList, p.chekList ?? {});
     s.set(currentHp, p.Hp ?? 0);
     s.set(maxHp, p.totHp ?? 0);
