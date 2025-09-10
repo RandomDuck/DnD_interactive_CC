@@ -2,7 +2,6 @@ import { utils } from "@/atoms/checkbox-atoms";
 
 function toggleChek(check, set, name) {
   check[name].checked = !check[name].checked
-  check[name].callback();
   set({ ...check });
 }
 
