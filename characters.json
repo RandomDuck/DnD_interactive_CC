@@ -10,102 +10,128 @@
       "shield": {
         "name": "shield",
         "checked": true
-      },
+      }
+    },
+    "dropdownList": {
       "strength save": {
-        "name": "strength save",
-        "checked": true
+        "id": "strength save",
+        "type": "proficient",
+        "value": 0
       },
       "acrobatics": {
-        "name": "acrobatics",
-        "checked": false
+        "id": "acrobatics",
+        "type": "unskilled",
+        "value": 0
       },
       "athletics": {
-        "name": "athletics",
-        "checked": true
+        "id": "athletics",
+        "type": "proficient",
+        "value": 0
       },
       "dexterity save": {
-        "name": "dexterity save",
-        "checked": false
+        "id": "dexterity save",
+        "type": "unskilled",
+        "value": 0
       },
       "sleight of hand": {
-        "name": "sleight of hand",
-        "checked": false
+        "id": "sleight of hand",
+        "type": "unskilled",
+        "value": 0
       },
       "stealth": {
-        "name": "stealth",
-        "checked": true
+        "id": "stealth",
+        "type": "proficient",
+        "value": 0
       },
       "constitution save": {
-        "name": "constitution save",
-        "checked": true
+        "id": "constitution save",
+        "type": "proficient",
+        "value": 0
       },
       "intelligence save": {
-        "name": "intelligence save",
-        "checked": false
+        "id": "intelligence save",
+        "type": "unskilled",
+        "value": 0
       },
       "arcana": {
-        "name": "arcana",
-        "checked": false
+        "id": "arcana",
+        "type": "unskilled",
+        "value": 0
       },
       "history": {
-        "name": "history",
-        "checked": false
+        "id": "history",
+        "type": "unskilled",
+        "value": 0
       },
       "investigation": {
-        "name": "investigation",
-        "checked": false
+        "id": "investigation",
+        "type": "unskilled",
+        "value": 0
       },
       "nature": {
-        "name": "nature",
-        "checked": false
+        "id": "nature",
+        "type": "unskilled",
+        "value": 0
       },
       "religion": {
-        "name": "religion",
-        "checked": false
+        "id": "religion",
+        "type": "unskilled",
+        "value": 0
       },
       "wisdom save": {
-        "name": "wisdom save",
-        "checked": true
+        "id": "wisdom save",
+        "type": "proficient",
+        "value": 0
       },
       "animal handling": {
-        "name": "animal handling",
-        "checked": false
+        "id": "animal handling",
+        "type": "expertise",
+        "value": 0
       },
       "insight": {
-        "name": "insight",
-        "checked": false
+        "id": "insight",
+        "type": "unskilled",
+        "value": 0
       },
       "medicine": {
-        "name": "medicine",
-        "checked": false
+        "id": "medicine",
+        "type": "unskilled",
+        "value": 0
       },
       "perception": {
-        "name": "perception",
-        "checked": false
+        "id": "perception",
+        "type": "unskilled",
+        "value": 0
       },
       "survival": {
-        "name": "survival",
-        "checked": false
+        "id": "survival",
+        "type": "unskilled",
+        "value": 0
       },
       "charisma save": {
-        "name": "charisma save",
-        "checked": false
+        "id": "charisma save",
+        "type": "unskilled",
+        "value": 0
       },
       "deception": {
-        "name": "deception",
-        "checked": false
+        "id": "deception",
+        "type": "unskilled",
+        "value": 0
       },
       "intimidation": {
-        "name": "intimidation",
-        "checked": false
+        "id": "intimidation",
+        "type": "proficient",
+        "value": 0
       },
       "performance": {
-        "name": "performance",
-        "checked": false
+        "id": "performance",
+        "type": "custom",
+        "value": 1
       },
       "persuasion": {
-        "name": "persuasion",
-        "checked": false
+        "id": "persuasion",
+        "type": "unskilled",
+        "value": 0
       }
     },
     "Hp": 18,
@@ -139,102 +165,128 @@
       "shield": {
         "name": "shield",
         "checked": false
-      },
+      }
+    },
+    "dropdownList": {
       "strength save": {
-        "name": "strength save",
-        "checked": false
+        "id": "strength save",
+        "type": "proficient",
+        "value": 0
       },
       "acrobatics": {
-        "name": "acrobatics",
-        "checked": false
+        "id": "acrobatics",
+        "type": "expertise",
+        "value": 0
       },
       "athletics": {
-        "name": "athletics",
-        "checked": false
+        "id": "athletics",
+        "type": "unskilled",
+        "value": 0
       },
       "dexterity save": {
-        "name": "dexterity save",
-        "checked": true
+        "id": "dexterity save",
+        "type": "proficient",
+        "value": 0
       },
       "sleight of hand": {
-        "name": "sleight of hand",
-        "checked": false
+        "id": "sleight of hand",
+        "type": "unskilled",
+        "value": 0
       },
       "stealth": {
-        "name": "stealth",
-        "checked": false
+        "id": "stealth",
+        "type": "unskilled",
+        "value": 0
       },
       "constitution save": {
-        "name": "constitution save",
-        "checked": true
+        "id": "constitution save",
+        "type": "proficient",
+        "value": 0
       },
       "intelligence save": {
-        "name": "intelligence save",
-        "checked": false
+        "id": "intelligence save",
+        "type": "unskilled",
+        "value": 0
       },
       "arcana": {
-        "name": "arcana",
-        "checked": true
+        "id": "arcana",
+        "type": "proficient",
+        "value": 0
       },
       "history": {
-        "name": "history",
-        "checked": true
+        "id": "history",
+        "type": "proficient",
+        "value": 0
       },
       "investigation": {
-        "name": "investigation",
-        "checked": false
+        "id": "investigation",
+        "type": "unskilled",
+        "value": 0
       },
       "nature": {
-        "name": "nature",
-        "checked": false
+        "id": "nature",
+        "type": "unskilled",
+        "value": 0
       },
       "religion": {
-        "name": "religion",
-        "checked": false
+        "id": "religion",
+        "type": "unskilled",
+        "value": 0
       },
       "wisdom save": {
-        "name": "wisdom save",
-        "checked": false
+        "id": "wisdom save",
+        "type": "unskilled",
+        "value": 0
       },
       "animal handling": {
-        "name": "animal handling",
-        "checked": true
+        "id": "animal handling",
+        "type": "proficient",
+        "value": 0
       },
       "insight": {
-        "name": "insight",
-        "checked": true
+        "id": "insight",
+        "type": "proficient",
+        "value": 0
       },
       "medicine": {
-        "name": "medicine",
-        "checked": false
+        "id": "medicine",
+        "type": "unskilled",
+        "value": 0
       },
       "perception": {
-        "name": "perception",
-        "checked": false
+        "id": "perception",
+        "type": "unskilled",
+        "value": 0
       },
       "survival": {
-        "name": "survival",
-        "checked": false
+        "id": "survival",
+        "type": "unskilled",
+        "value": 0
       },
       "charisma save": {
-        "name": "charisma save",
-        "checked": true
+        "id": "charisma save",
+        "type": "custom",
+        "value": 1
       },
       "deception": {
-        "name": "deception",
-        "checked": true
+        "id": "deception",
+        "type": "unskilled",
+        "value": 0
       },
       "intimidation": {
-        "name": "intimidation",
-        "checked": true
+        "id": "intimidation",
+        "type": "proficient",
+        "value": 0
       },
       "performance": {
-        "name": "performance",
-        "checked": false
+        "id": "performance",
+        "type": "unskilled",
+        "value": 0
       },
       "persuasion": {
-        "name": "persuasion",
-        "checked": true
+        "id": "persuasion",
+        "type": "expertise",
+        "value": 0
       }
     },
     "Hp": 22,
@@ -268,102 +320,128 @@
       "shield": {
         "name": "shield",
         "checked": false
-      },
+      }
+    },
+    "dropdownList": {
       "strength save": {
-        "name": "strength save",
-        "checked": false
+        "id": "strength save",
+        "type": "unskilled",
+        "value": 0
       },
       "acrobatics": {
-        "name": "acrobatics",
-        "checked": true
+        "id": "acrobatics",
+        "type": "unskilled",
+        "value": 0
       },
       "athletics": {
-        "name": "athletics",
-        "checked": false
+        "id": "athletics",
+        "type": "proficient",
+        "value": 0
       },
       "dexterity save": {
-        "name": "dexterity save",
-        "checked": false
+        "id": "dexterity save",
+        "type": "unskilled",
+        "value": 0
       },
       "sleight of hand": {
-        "name": "sleight of hand",
-        "checked": false
+        "id": "sleight of hand",
+        "type": "unskilled",
+        "value": 0
       },
       "stealth": {
-        "name": "stealth",
-        "checked": false
+        "id": "stealth",
+        "type": "unskilled",
+        "value": 0
       },
       "constitution save": {
-        "name": "constitution save",
-        "checked": false
+        "id": "constitution save",
+        "type": "unskilled",
+        "value": 0
       },
       "intelligence save": {
-        "name": "intelligence save",
-        "checked": true
+        "id": "intelligence save",
+        "type": "proficient",
+        "value": 0
       },
       "arcana": {
-        "name": "arcana",
-        "checked": true
+        "id": "arcana",
+        "type": "proficient",
+        "value": 0
       },
       "history": {
-        "name": "history",
-        "checked": true
+        "id": "history",
+        "type": "proficient",
+        "value": 0
       },
       "investigation": {
-        "name": "investigation",
-        "checked": false
+        "id": "investigation",
+        "type": "unskilled",
+        "value": 0
       },
       "nature": {
-        "name": "nature",
-        "checked": true
+        "id": "nature",
+        "type": "proficient",
+        "value": 0
       },
       "religion": {
-        "name": "religion",
-        "checked": true
+        "id": "religion",
+        "type": "proficient",
+        "value": 0
       },
       "wisdom save": {
-        "name": "wisdom save",
-        "checked": true
+        "id": "wisdom save",
+        "type": "proficient",
+        "value": 0
       },
       "animal handling": {
-        "name": "animal handling",
-        "checked": false
+        "id": "animal handling",
+        "type": "unskilled",
+        "value": 0
       },
       "insight": {
-        "name": "insight",
-        "checked": false
+        "id": "insight",
+        "type": "unskilled",
+        "value": 0
       },
       "medicine": {
-        "name": "medicine",
-        "checked": false
+        "id": "medicine",
+        "type": "unskilled",
+        "value": 0
       },
       "perception": {
-        "name": "perception",
-        "checked": false
+        "id": "perception",
+        "type": "unskilled",
+        "value": 0
       },
       "survival": {
-        "name": "survival",
-        "checked": false
+        "id": "survival",
+        "type": "unskilled",
+        "value": 0
       },
       "charisma save": {
-        "name": "charisma save",
-        "checked": true
+        "id": "charisma save",
+        "type": "proficient",
+        "value": 0
       },
       "deception": {
-        "name": "deception",
-        "checked": false
+        "id": "deception",
+        "type": "unskilled",
+        "value": 0
       },
       "intimidation": {
-        "name": "intimidation",
-        "checked": false
+        "id": "intimidation",
+        "type": "unskilled",
+        "value": 0
       },
       "performance": {
-        "name": "performance",
-        "checked": false
+        "id": "performance",
+        "type": "unskilled",
+        "value": 0
       },
       "persuasion": {
-        "name": "persuasion",
-        "checked": false
+        "id": "persuasion",
+        "type": "unskilled",
+        "value": 0
       }
     },
     "Hp": 24,

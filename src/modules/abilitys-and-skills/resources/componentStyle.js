@@ -31,21 +31,21 @@ const CombinedWrapper = styled('div')`
   flex-direction: ${props => props.$column ? '$column' : 'row'};
   border-top: solid black 2px;
   margin-bottom: 0.5em;
-  width: ${props => props.$column ? '14em' : '21em'};
+  width: ${props => props.$column ? '14em' : '25em'};
 `
 
 const CombinedAbilityWrapper = styled('div')`
   display: flex;
   justify-content: center;
   border-left: solid 2px black;
-  width: 7.5em;
-  height: 4em;
+  width: 8.5em;
+  height: 3.5em;
 `
 
 const CombinedSkillUL = styled('ul')`
  & :first-child { 
   border-bottom: solid 1px black;
-  margin-left: -1.5em;
+  margin-left: -1em;
  }
   padding-left: 3.5em;
   flex-direction: column;
@@ -53,7 +53,7 @@ const CombinedSkillUL = styled('ul')`
   border-left: solid black 1px;
   align-items: flex-start;
   margin-top: 0;
-  margin-left: 1.5em;
+  margin-left: 1em;
 `
 
 export { SplitDiv, AbilityStyledUl, CombinedWrapper, CombinedSkillUL, SkillStyledUl, CombinedAbilityWrapper };
