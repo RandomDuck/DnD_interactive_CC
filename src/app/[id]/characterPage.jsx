@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useMemo, useRef, useEffect, use } from "react";
+import React, { useMemo, useRef, useCallback, useEffect, use } from "react";
 import { Provider, createStore, useAtom } from "jotai";
 
 import { imageSrcAtom } from "@/atoms/chatacter-image-atom";
 import { chekboxList } from "@/atoms/checkbox-atoms";
+import { dropdownList as dropdownListAtom } from "@/atoms/dropdown-atoms";
 import { currentHp, currentTempHp, maxHp } from "@/atoms/health-bar-atom";
 import { classLevels, totalLevel } from "@/atoms/level-atom";
 import { getModifierAtom } from "@/atoms/modifier-atoms";
@@ -13,31 +14,97 @@ import { AbilityAndSkill } from "@/modules/abilitys-and-skills";
 import { CharacterEmblem } from "@/modules/character-emblem";
 
 /** Debounced POST that never fires on load (baseline on first enable) */
-function useDebouncedPost(data, delay = 3000, enabled = true) {
+export function useDebouncedPost(data, delay = 3000, enabled = true) {
   const json = useMemo(() => JSON.stringify(data), [data]);
   const ready = useRef(false);
   const lastSent = useRef(null);
+  const timer = useRef(null);
 
-  useEffect(() => {
+  const sendNow = useCallback(async () => {
     if (!enabled) return;
-
     if (!ready.current) {
-      lastSent.current = json; // establish baseline on first enable
+      // establish baseline on first enable; don't post
+      lastSent.current = json;
       ready.current = true;
       return;
     }
     if (json === lastSent.current) return;
-    const t = setTimeout(async () => {
+
+    try {
       await fetch("/api/character", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: json,
       });
       lastSent.current = json;
-    }, delay);
+    } catch (e) {
+      // swallow on unload contexts
+      console.error(e);
+    }
+  }, [enabled, json]);
 
-    return () => clearTimeout(t);
-  }, [json, delay, enabled]);
+  // Debounce logic
+  useEffect(() => {
+    if (!enabled) return;
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => {
+      void sendNow();
+    }, delay);
+    return () => {
+      if (timer.current) clearTimeout(timer.current);
+    };
+  }, [delay, enabled, json, sendNow]);
+
+  // Expose a flush() to send immediately
+  const flush = useCallback(() => {
+    if (timer.current) {
+      clearTimeout(timer.current);
+      timer.current = null;
+    }
+    void sendNow();
+  }, [sendNow]);
+
+  return { flush };
+}
+
+export function usePostOnUnload(getLatestJson, url = "/api/character") {
+  useEffect(() => {
+    const send = () => {
+      const json = getLatestJson();
+      // Prefer sendBeacon (non-blocking, allowed during unload)
+      if (navigator.sendBeacon) {
+        const blob = new Blob([json], { type: "application/json" });
+        navigator.sendBeacon(url, blob);
+      } else {
+        // Fallback: sync XHR is deprecated; best-effort fetch with keepalive
+        try {
+          fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: json,
+            keepalive: true, // important for unload contexts
+          });
+        } catch { }
+      }
+    };
+
+    // Fire when tab is backgrounded or about to unload
+    const onVis = () => {
+      if (document.visibilityState === "hidden") send();
+    };
+    const onPageHide = () => send();
+    const onBeforeUnload = () => send();
+
+    document.addEventListener("visibilitychange", onVis);
+    window.addEventListener("pagehide", onPageHide);
+    window.addEventListener("beforeunload", onBeforeUnload);
+
+    return () => {
+      document.removeEventListener("visibilitychange", onVis);
+      window.removeEventListener("pagehide", onPageHide);
+      window.removeEventListener("beforeunload", onBeforeUnload);
+    };
+  }, [getLatestJson, url]);
 }
 
 /** Capture your modifier atoms once and reuse them (no changes to atom code) */
@@ -55,6 +122,7 @@ function CharacterContent({ id, modAtoms }) {
   // read base atoms
   const [imageSrc] = useAtom(imageSrcAtom);
   const [checkList] = useAtom(chekboxList);
+  const [dropdownList] = useAtom(dropdownListAtom);
   const [hp] = useAtom(currentHp);
   const [totHp_] = useAtom(maxHp);
   const [tempHp] = useAtom(currentTempHp);
@@ -78,6 +146,7 @@ function CharacterContent({ id, modAtoms }) {
       id,
       imageSrc,
       chekList: checkList,
+      dropdownList: dropdownList,
       Hp: hp,
       totHp: totHp_,
       TempHp: tempHp,
@@ -89,6 +158,7 @@ function CharacterContent({ id, modAtoms }) {
       id,
       imageSrc,
       checkList,
+      dropdownList,
       hp,
       totHp_,
       tempHp,
@@ -107,8 +177,15 @@ function CharacterContent({ id, modAtoms }) {
     ]
   );
 
-  // Start enabled immediately; baseline prevents initial POST
-  useDebouncedPost(characterData, 1000, true);
+  const dataJson = useMemo(() => JSON.stringify(characterData), [characterData])
+
+  const { flush } = useDebouncedPost(characterData, 1000, true);
+
+  // On unload, first flush (to align lastSent baseline), then beacon
+  usePostOnUnload(() => {
+    flush();            // ensure pending debounce is sent (or baseline set)
+    return dataJson;    // send the latest snapshot via sendBeacon/keepalive
+  });
 
   return (
     <div id="rootElement" data-testid="rootElement">
@@ -131,6 +208,7 @@ export default function CharacterPageClient({ id, serverData }) {
     // base atoms
     s.set(imageSrcAtom, p.imageSrc ?? null);
     s.set(chekboxList, p.chekList ?? {});
+    s.set(dropdownListAtom, p.dropdownList ?? {});
     s.set(currentHp, p.Hp ?? 0);
     s.set(maxHp, p.totHp ?? 0);
     s.set(currentTempHp, p.TempHp ?? 0);
