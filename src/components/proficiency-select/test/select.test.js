@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { Dropdown } from '..';
+import Dropdown from '..';
 
 
 test('Dropdown is renderd', () => {
   render(<Dropdown />)
-  const dropdown = screen.getAllByRole('select')[0]
+  const dropdown = screen.getAllByRole('combobox')[0]
   expect(dropdown).toBeVisible();
 });
